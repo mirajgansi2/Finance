@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "tagline": "Community Finance",
+    "description": "Placeholder description for the Demo financial institution website."
+  },
+  "common": {
+    "skipToContent": "Skip to main content",
+    "placeholderNotice": "This is placeholder content. It will be replaced once the institution provides verified information."
+  },
+  "nav": {
+    "primary": "Main navigation",
+    "home": "Home",
+    "about": "About us",
+    "services": "Services",
+    "news": "News & notices",
+    "careers": "Careers",
+    "contact": "Contact",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu"
+  },
+  "language": {
+    "label": "Language"
+  },
+  "home": {
+    "hero": {
+      "title": "Trusted savings and loan services, close to your community",
+      "subtitle": "Transparent, secure and accessible financial services for everyone. (Placeholder content)",
+      "primaryCta": "Explore services",
+      "secondaryCta": "Contact us"
+    },
+    "services": {
+      "title": "Our services",
+      "intro": "A short overview of what we offer.",
+      "items": {
+        "savings": {
+          "title": "Savings",
+          "description": "Placeholder: details of savings schemes will appear here once verified."
+        },
+        "loans": {
+          "title": "Loans",
+          "description": "Placeholder: details of loan products will appear here once verified."
+        },
+        "other": {
+          "title": "Other services",
+          "description": "Placeholder: other member services will be listed here once confirmed."
+        }
+      }
+    }
+  },
+  "footer": {
+    "description": "{name} is a temporary placeholder name for a community financial institution website.",
+    "quickLinks": "Quick links",
+    "contactTitle": "Contact",
+    "address": "Address: to be provided",
+    "phone": "Phone",
+    "email": "Email",
+    "privacy": "Privacy policy",
+    "terms": "Terms of use",
+    "rights": "© {year} {name}. All rights reserved."
+  }
+}
