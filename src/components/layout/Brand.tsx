@@ -7,6 +7,7 @@ export function Brand() {
       <span className="brand-mark" aria-hidden="true">
         {siteConfig.name.charAt(0)}
       </span>
+    
       <span>{siteConfig.name}</span>
     </Link>
   );

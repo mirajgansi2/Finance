@@ -28,6 +28,32 @@
       "primaryCta": "Explore services",
       "secondaryCta": "Contact us"
     },
+    "latest": {
+      "label": "Latest updates",
+      "dateLabel": "Last added",
+      "pause": "Pause scrolling updates",
+      "play": "Resume scrolling updates"
+    },
+    "welcome": {
+      "title": "Welcome",
+      "body": "Welcome to our website. Here you can find information about our services, notices and career opportunities. (Placeholder content)",
+      "cta": "Learn more about us"
+    },
+    "chairman": {
+      "title": "Message from the Chairperson",
+      "name": "Chairperson's name to be provided",
+      "role": "Chairperson",
+      "body": "Placeholder: the Chairperson's message will be published here once supplied by the institution."
+    },
+    "stats": {
+      "title": "Key figures",
+      "currencyPrefix": "Rs.",
+      "shareCapital": "Share capital",
+      "savings": "Total savings",
+      "loans": "Loans issued",
+      "members": "Members",
+      "placeholderNote": "Sample figures only. Verified figures will be provided by the institution."
+    },
     "services": {
       "title": "Our services",
       "intro": "A short overview of what we offer.",
