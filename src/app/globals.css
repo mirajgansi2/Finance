@@ -215,12 +215,17 @@ html[lang="ne"] {
   }
 
   /* ---- Cards ---- */
-  .card {
-    background: var(--color-surface);
-    border: 1px solid var(--color-line);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-card);
-    padding: 1.5rem;
+  .card--hover {
+    cursor: pointer;
+    transition:
+      transform var(--transition-base),
+      box-shadow var(--transition-base),
+      border-color var(--transition-base);
+  }
+  .card--hover:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-navy-100);
+    box-shadow: 0 18px 32px -8px rgb(27 58 104 / 0.55);
   }
 
   .notice-banner {
@@ -489,7 +494,7 @@ html[lang="ne"] {
   }
     /* ---- Home: latest updates ticker, chairperson & welcome cards ---- */
   .section-tight {
-    padding-block: clamp(2rem, 4vw, 3rem);
+    padding-block: clamp(2rem, 1vw, 3rem);
   }
 
   .card__text {
@@ -707,6 +712,20 @@ html[lang="ne"] {
     margin-top: 0.75rem;
   }
     /* ---- Stat card (icon left, label above value) ---- */
+      .stat-card--feature {
+    align-items: flex-start;
+  }
+  .stat-card--feature .stat-card__label {
+    color: var(--color-brand-strong);
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+  .stat-card--feature .stat-card__value {
+    margin-top: 0.25rem;
+    color: var(--color-muted);
+    font-size: 0.9375rem;
+    font-weight: 400;
+  }
   .stat-card {
     --stat-color: var(--color-forest-700); /* override per card via the iconColor prop */
     display: flex;
@@ -769,4 +788,129 @@ html[lang="ne"] {
     width: 1.75rem;
     height: 1.75rem;
   }}
+    /* ---- Get in touch ---- */
+  .contact-panel {
+    padding: clamp(1.25rem, 3vw, 2.5rem);
+    background: var(--color-navy-100);
+        border-radius: var(--radius-lg);
+  }
+  .contact-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+    margin-top: 2rem;
+  }
+  @media (min-width: 64rem) {
+    .contact-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+  }
+  .map-frame,
+  .map-placeholder {
+    width: 100%;
+    height: 20rem;
+    margin-top: 1rem;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+  }
+  .map-placeholder {
+    display: grid;
+    place-items: center;
+    padding: 1.5rem;
+    text-align: center;
+    color: var(--color-muted);
+  }
+  .map-placeholder svg {
+    margin-inline: auto;
+    margin-bottom: 0.5rem;
+    color: var(--color-accent-strong);
+  }
+  .contact-details {
+    display: grid;
+    gap: 0.75rem;
+    margin: 1.25rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+  .contact-details li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  .contact-details svg {
+    flex: none;
+    margin-top: 0.25rem;
+    color: var(--color-accent-strong);
+  }
+  .contact-details a {
+    color: var(--color-brand);
+    text-underline-offset: 3px;
+  }
+
+  /* Contact form */
+  .contact-form {
+    position: relative;
+  }
+  .form-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    margin-top: 1rem;
+  }
+  @media (min-width: 40rem) {
+    .form-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .form-grid__full {
+      grid-column: 1 / -1;
+    }
+  }
+  textarea.field-input {
+    min-height: 8rem;
+    resize: vertical;
+  }
+  .field-input[aria-invalid="true"] {
+    border-color: var(--color-danger);
+    border-width: 2px;
+  }
+  .btn-block {
+    width: 100%;
+  }
+  .hp-field {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+  .form-status {
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+  }
+  .form-status--success {
+    color: var(--color-success);
+    background: var(--color-forest-50);
+    border-color: var(--color-success);
+  }
+  .form-status--error {
+    color: var(--color-danger);
+    background: #fef3f2;
+    border-color: var(--color-danger);
+  }
+    .btn-brand {
+    background: var(--color-brand);
+    color: var(--color-on-brand);
+  }
+  .btn-brand:hover:not(:disabled) {
+    background: var(--color-brand-deep);
+  }
+  .btn-brand:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
 }

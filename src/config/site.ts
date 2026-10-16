@@ -9,4 +9,9 @@ export const siteConfig = {
     email: "info@example.com",
     phone: "+977-00-0000000",
   },
+  map: {
+    // Paste the "src" URL from Google Maps > Share > Embed a map ONLY after
+    // the institution confirms its exact location. While null, a placeholder shows.
+    embedUrl: null as string | null,
+  },
 } as const;

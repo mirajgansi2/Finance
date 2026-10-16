@@ -1,4 +1,10 @@
-import { HandCoins, Landmark, PiggyBank, Users } from "lucide-react";
+import {
+  HandCoins,
+  Landmark,
+  LayoutGrid,
+  PiggyBank,
+  Users,
+} from "lucide-react";
 import {
   getFormatter,
   getTranslations,
@@ -9,10 +15,16 @@ import { StatCard } from "@/components/shared/StatCard";
 import { latestUpdates } from "@/features/home/placeholderContent";
 import { Link } from "@/i18n/navigation";
 import { localized } from "@/lib/Localized";
+import { ContactSection } from "@/features/contanct/contactSection";
+
 
 type Props = { params: Promise<{ locale: string }> };
 
-const serviceKeys = ["savings", "loans", "other"] as const;
+const services = [
+  { key: "savings", Icon: PiggyBank, color: "var(--color-forest-700)" },
+  { key: "loans", Icon: HandCoins, color: "var(--color-navy-700)" },
+  { key: "other", Icon: LayoutGrid, color: "#b45309" },
+] as const;
 
 export default async function HomePage({ params }: Props) {
   const { locale } = await params;
@@ -147,7 +159,9 @@ export default async function HomePage({ params }: Props) {
               iconColor="#0f766e"
             />
           </div>
-          
+          <p className="notice-banner" role="note" style={{ marginTop: "1rem" }}>
+            {t("stats.placeholderNote")}
+          </p>
         </div>
       </section>
 
@@ -163,14 +177,16 @@ export default async function HomePage({ params }: Props) {
             {t("services.intro")}
           </p>
 
-          <div className="card-grid" style={{ marginTop: "2rem" }}>
-            {serviceKeys.map((key) => (
-              <article key={key} className="card">
-                <h3 className="heading-md">{t(`services.items.${key}.title`)}</h3>
-                <p className="card__text">
-                  {t(`services.items.${key}.description`)}
-                </p>
-              </article>
+         <div className="card-grid" style={{ marginTop: "2rem" }}>
+            {services.map(({ key, Icon, color }) => (
+              <StatCard
+                key={key}
+                variant="feature"
+                icon={<Icon />}
+                iconColor={color}
+                label={t(`services.items.${key}.title`)}
+                value={t(`services.items.${key}.description`)}
+              />
             ))}
           </div>
 
@@ -179,6 +195,8 @@ export default async function HomePage({ params }: Props) {
           </p>
         </div>
       </section>
+
+      <ContactSection />
     </>
   );
 }

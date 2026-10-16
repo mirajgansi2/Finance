@@ -73,6 +73,41 @@
       }
     }
   },
+  "contact": {
+    "title": "Get in touch",
+    "intro": "We would be glad to hear from you.",
+    "findUs": "Find us at",
+    "mapTitle": "Map showing our office location",
+    "mapPlaceholder": "The map will appear here once the institution provides its verified location.",
+    "address": "Address: to be provided",
+    "hours": "Office hours: to be provided",
+    "phoneLabel": "Phone",
+    "emailLabel": "Email",
+    "formTitle": "Or fill in the form to reach out to us",
+    "form": {
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email",
+      "phone": "Mobile number",
+      "message": "Message",
+      "optional": "optional",
+      "submit": "Send message",
+      "sending": "Sending…"
+    },
+    "errors": {
+      "required": "This field is required.",
+      "tooLong": "This is too long.",
+      "invalidEmail": "Enter a valid email address.",
+      "invalidPhone": "Enter a valid phone number.",
+      "messageTooShort": "Please write at least 10 characters."
+    },
+    "status": {
+      "success": "Thank you. Your message has been sent.",
+      "rateLimited": "Too many attempts. Please wait a few minutes and try again.",
+      "validation": "Some details were not accepted. Please check the form and try again.",
+      "unavailable": "We could not send your message right now. Please try again later or contact us by phone or email."
+    }
+  },
   "footer": {
     "description": "{name} is a temporary placeholder name for a community financial institution website.",
     "quickLinks": "Quick links",
