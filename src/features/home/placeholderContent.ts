@@ -1,4 +1,4 @@
-import { LocalizedText } from "@/lib/Localized";
+import { LocalizedText } from "@/lib/localized";
 
 export type LatestUpdate = {
   id: string;

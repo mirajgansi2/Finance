@@ -14,7 +14,7 @@ import { LatestUpdatesTicker } from "@/components/shared/LatestUpdatesTicker";
 import { StatCard } from "@/components/shared/StatCard";
 import { latestUpdates } from "@/features/home/placeholderContent";
 import { Link } from "@/i18n/navigation";
-import { localized } from "@/lib/Localized";
+import { localized } from "@/lib/localized";
 import { ContactSection } from "@/features/contanct/contactSection";
 
 
@@ -63,7 +63,7 @@ export default async function HomePage({ params }: Props) {
           <h1 className="heading-xl">{t("hero.title")}</h1>
           <p className="hero__lead">{t("hero.subtitle")}</p>
           <div className="hero__actions">
-            <Link href="/services" className="btn btn-primary">
+            <Link href="/services" className="btn btn-brand">
               {t("hero.primaryCta")}
             </Link>
             <Link href="/contact" className="btn btn-light">

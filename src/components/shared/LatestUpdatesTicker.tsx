@@ -18,11 +18,7 @@ type Props = {
 export function LatestUpdatesTicker({
   label,
   items,
-  dateLabel,
-  dateIso,
-  dateText,
-  pauseLabel,
-  playLabel,
+
 }: Props) {
   const [paused, setPaused] = useState(false);
 

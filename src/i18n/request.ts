@@ -1,6 +1,19 @@
-import { hasLocale } from "next-intl";
+import { hasLocale, type AbstractIntlMessages } from "next-intl";
 import { getRequestConfig } from "next-intl/server";
-import { routing } from "./routing";
+import { routing, type Locale } from "./routing";
+
+// Explicit imports (no template-string paths), so the bundler can always resolve every file.
+// Add a new messages file here when you add a new language or feature file.
+const messageLoaders: Record<Locale, () => Promise<AbstractIntlMessages>> = {
+  en: async () => ({
+    ...(await import("../messages/en.json")).default,
+    ...(await import("../messages/pages/en.json")).default,
+  }),
+  ne: async () => ({
+    ...(await import("../messages/ne.json")).default,
+    ...(await import("../messages/pages/ne.json")).default,
+  }),
+};
 
 export default getRequestConfig(async ({ requestLocale }) => {
   const requested = await requestLocale;
@@ -10,7 +23,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
 
   return {
     locale,
-    messages: (await import(`../messages/${locale}.json`)).default,
+    messages: await messageLoaders[locale](),
     onError(error) {
       if (process.env.NODE_ENV === "development") {
         console.error(error);

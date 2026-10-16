@@ -275,6 +275,9 @@ html[lang="ne"] {
     font-size: 1.25rem;
     text-decoration: none;
   }
+    .site-header .brand-mark {
+    background: var(--color-brand);
+  }
   .brand-mark {
     display: grid;
     place-items: center;
@@ -342,7 +345,7 @@ html[lang="ne"] {
   .nav-link[aria-current="page"] {
     color: var(--color-brand);
     font-weight: 700;
-    border-bottom-color: var(--color-accent);
+    border-bottom-color: var(--color-brand);
   }
 
   .menu-toggle {
@@ -371,7 +374,7 @@ html[lang="ne"] {
     border-left: 3px solid transparent;
   }
   .mobile-panel .nav-link[aria-current="page"] {
-    border-left-color: var(--color-accent);
+    border-left-color: var(--color-brand);
   }
 
   /* Desktop: hide the hamburger and the mobile panel */
@@ -912,5 +915,87 @@ html[lang="ne"] {
   .btn-brand:disabled {
     opacity: 0.7;
     cursor: not-allowed;
+  }
+    /* ---- Inner pages ---- */
+  .page-header {
+    background: var(--color-brand-deep);
+    color: var(--color-on-brand);
+    padding-block: clamp(2rem, 5vw, 3.5rem);
+  }
+  .page-header h1 {
+    color: var(--color-on-brand);
+  }
+  .page-header__intro {
+    margin-top: 0.75rem;
+    max-width: 44rem;
+    color: var(--color-navy-100);
+    font-size: 1.125rem;
+  }
+
+  .page-stack {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 48rem) {
+    .card-grid--2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .card[id] {
+    scroll-margin-top: 6rem; /* keeps anchored cards clear of the sticky header */
+  }
+
+  .detail-list {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.5rem 1.25rem;
+    margin: 1rem 0 0;
+  }
+  .detail-list dt {
+    color: var(--color-muted);
+    font-weight: 600;
+  }
+  .detail-list dd {
+    margin: 0;
+  }
+
+  .meta-line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 1rem;
+    color: var(--color-muted);
+    font-size: 0.9375rem;
+  }
+
+  .tag {
+    display: inline-block;
+    padding: 0.125rem 0.75rem;
+    border: 1px solid var(--color-line);
+    border-radius: 999px;
+    background: var(--color-surface-alt);
+    color: var(--color-brand-strong);
+    font-size: 0.875rem;
+    font-weight: 700;
+  }
+  .tag--open {
+    border-color: var(--color-success);
+    background: var(--color-forest-50);
+    color: var(--color-success);
+  }
+  .tag--closed {
+    border-color: var(--color-muted);
+    background: var(--color-surface-alt);
+    color: var(--color-muted);
+  }
+
+  .vacancy-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem 1rem;
   }
 }

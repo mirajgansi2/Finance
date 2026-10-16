@@ -1,0 +1,96 @@
+{
+  "about": {
+    "title": "About us",
+    "intro": "Learn about who we are and what we stand for. (Placeholder content)",
+    "mission": {
+      "title": "Our mission",
+      "body": "Placeholder: the institution's mission statement will appear here."
+    },
+    "vision": {
+      "title": "Our vision",
+      "body": "Placeholder: the institution's vision statement will appear here."
+    },
+    "values": {
+      "title": "Our values",
+      "items": {
+        "trust": {
+          "title": "Trust",
+          "body": "Placeholder: a description of this value will be added once supplied by the institution."
+        },
+        "transparency": {
+          "title": "Transparency",
+          "body": "Placeholder: a description of this value will be added once supplied by the institution."
+        },
+        "community": {
+          "title": "Community",
+          "body": "Placeholder: a description of this value will be added once supplied by the institution."
+        }
+      }
+    },
+    "history": {
+      "title": "Our history",
+      "body": "Placeholder: verified history and milestones will appear here."
+    },
+    "leadership": {
+      "title": "Leadership",
+      "body": "Placeholder: profiles of the management and leadership will appear here once supplied."
+    }
+  },
+  "services": {
+    "title": "Services",
+    "intro": "Our savings, loan and other services. (Placeholder content)",
+    "items": {
+      "savings": {
+        "title": "Savings",
+        "description": "Placeholder: details of savings schemes will appear here once verified."
+      },
+      "loans": {
+        "title": "Loans",
+        "description": "Placeholder: details of loan products will appear here once verified."
+      },
+      "other": {
+        "title": "Other services",
+        "description": "Placeholder: other member services will be listed here once confirmed."
+      }
+    },
+    "eligibility": "Eligibility",
+    "documents": "Required documents",
+    "howToApply": "How to apply",
+    "pending": "To be provided by the institution.",
+    "ratesDisclaimer": "Interest rates and fees will be shown only after the institution officially verifies them."
+  },
+  "news": {
+    "title": "News & notices",
+    "intro": "News, public notices and important updates from the institution. (Placeholder content)",
+    "categories": {
+      "news": "News",
+      "notice": "Notice",
+      "announcement": "Announcement"
+    },
+    "published": "Published",
+    "empty": "No announcements are available yet. Please check back soon."
+  },
+  "careers": {
+    "title": "Careers",
+    "intro": "Join our team. Current vacancies are listed below. (Placeholder content)",
+    "openPositions": "Vacancies",
+    "department": "Department",
+    "type": "Employment type",
+    "location": "Location",
+    "deadline": "Deadline",
+    "status": {
+      "open": "Open",
+      "closed": "Closed"
+    },
+    "types": {
+      "fullTime": "Full-time",
+      "partTime": "Part-time"
+    },
+    "applyNote": "Online applications will be available soon.",
+    "empty": "There are no vacancies at the moment."
+  },
+  "contactPage": {
+    "title": "Contact us",
+    "intro": "Find our office details below, or send us a message."
+  }
+}
