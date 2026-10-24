@@ -259,6 +259,12 @@ html[lang="ne"] {
     background: var(--color-surface);
     color: var(--color-ink);
   }
+  /* Blue focus for text fields (inputs and textarea) */
+  .field-input:focus-visible {
+    border-color: var(--color-brand);
+    outline: 3px solid var(--color-brand);
+    outline-offset: 1px;
+  }
   .field-error {
     color: var(--color-danger);
     font-size: 0.9375rem;
